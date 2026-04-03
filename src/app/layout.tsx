@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LenisProvider } from "@/components/providers/lenis-provider";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
+
+const spaceGrotesk = localFont({
+  src: [
+    { path: "../../public/fonts/SpaceGrotesk-Regular.woff2", weight: "400" },
+    { path: "../../public/fonts/SpaceGrotesk-Bold.woff2", weight: "700" },
+  ],
+  variable: "--font-space-grotesk",
+  display: "swap",
+  preload: true,
+});
+
+const manrope = localFont({
+  src: [
+    { path: "../../public/fonts/Manrope-Regular.woff2", weight: "400" },
+    { path: "../../public/fonts/Manrope-Bold.woff2", weight: "700" },
+  ],
+  variable: "--font-manrope",
+  display: "swap",
+  preload: true,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -88,7 +109,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${manrope.variable} antialiased`}
+    >
       <head>
         <script
           type="application/ld+json"
