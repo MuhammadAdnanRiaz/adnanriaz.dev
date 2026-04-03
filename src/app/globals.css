@@ -1,26 +1,270 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   THE KINETIC ARCHITECT — Design Tokens
+   ============================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Typography */
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+
+  /* Design System Colors (driven by CSS vars for theme switching) */
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  --color-primary: var(--primary);
+  --color-primary-dim: var(--primary-dim);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-dim: var(--secondary-dim);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary: var(--on-secondary);
+
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-container: var(--tertiary-container);
+
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --color-error: var(--error);
+  --color-on-error: var(--on-error);
+
+  --color-inverse-surface: var(--inverse-surface);
+  --color-inverse-on-surface: var(--inverse-on-surface);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Dark theme (default) */
+:root {
+  --surface: #0b0e14;
+  --surface-dim: #0b0e14;
+  --surface-bright: #282c36;
+  --surface-container-lowest: #000000;
+  --surface-container-low: #10131a;
+  --surface-container: #161a21;
+  --surface-container-high: #1c2028;
+  --surface-container-highest: #22262f;
+
+  --primary: #aaffdc;
+  --primary-dim: #00edb4;
+  --primary-container: #00fdc1;
+  --on-primary: #00654b;
+  --on-primary-container: #005c44;
+  --on-primary-fixed: #004734;
+
+  --secondary: #00cffc;
+  --secondary-dim: #00c0ea;
+  --secondary-container: #00677f;
+  --on-secondary: #004050;
+
+  --tertiary: #ac89ff;
+  --tertiary-container: #7000ff;
+
+  --on-surface: #ecedf6;
+  --on-surface-variant: #a9abb3;
+
+  --outline: #73757d;
+  --outline-variant: #45484f;
+
+  --error: #ff716c;
+  --on-error: #490006;
+
+  --inverse-surface: #f9f9ff;
+  --inverse-on-surface: #52555c;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --surface: #f9f9ff;
+  --surface-dim: #dadce3;
+  --surface-bright: #f9f9ff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f6f7fd;
+  --surface-container: #f0f1f7;
+  --surface-container-high: #e2e4ed;
+  --surface-container-highest: #dee3eb;
+
+  --primary: #006c51;
+  --primary-dim: #00edb4;
+  --primary-container: #00FFC2;
+  --on-primary: #ffffff;
+  --on-primary-container: #002116;
+  --on-primary-fixed: #004734;
+
+  --secondary: #00677f;
+  --secondary-dim: #00c0ea;
+  --secondary-container: #bce9ff;
+  --on-secondary: #ffffff;
+
+  --tertiary: #6b33f3;
+  --tertiary-container: #7000ff;
+
+  --on-surface: #161a21;
+  --on-surface-variant: #45484f;
+
+  --outline: #73757d;
+  --outline-variant: #c2c7cf;
+
+  --error: #ff716c;
+  --on-error: #ffffff;
+
+  --inverse-surface: #1c2028;
+  --inverse-on-surface: #f0f1f7;
+}
+
+/* ============================================
+   Font Face Declarations
+   ============================================ */
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
+@layer base {
+  * {
+    @apply border-outline-variant/15;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-on-surface;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================
+   Utility Classes
+   ============================================ */
+
+@layer utilities {
+  .glass {
+    background: color-mix(in srgb, var(--surface-container-high) 60%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-card {
+    background: color-mix(in srgb, var(--surface-container-high) 40%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid color-mix(in srgb, var(--outline-variant) 15%, transparent);
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  }
+
+  .ghost-border {
+    border: 1px solid color-mix(in srgb, var(--outline-variant) 15%, transparent);
+  }
+
+  .ambient-shadow {
+    box-shadow: 0 8px 40px color-mix(in srgb, var(--primary) 6%, transparent);
+  }
+
+  .ambient-shadow-lg {
+    box-shadow: 0 16px 60px color-mix(in srgb, var(--primary) 10%, transparent);
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
 }
