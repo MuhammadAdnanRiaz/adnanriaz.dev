@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { LenisProvider } from "@/components/providers/lenis-provider";
 import { siteConfig } from "@/lib/constants";
@@ -124,6 +125,7 @@ export default function RootLayout({
         <ThemeProvider>
           <LenisProvider>{children}</LenisProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
