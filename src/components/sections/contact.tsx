@@ -21,11 +21,22 @@ export function Contact() {
     resolver: zodResolver(contactSchema),
   });
 
+  const [error, setError] = useState<string | null>(null);
+
   const onSubmit = async (data: ContactFormData) => {
-    // Replace with your Formspree/Web3Forms endpoint
-    console.log("Form submitted:", data);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSubmitted(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email me directly.");
+    }
   };
 
   return (
@@ -174,6 +185,9 @@ export function Contact() {
                     </p>
                   )}
                 </div>
+                {error && (
+                  <p className="text-error text-sm text-center">{error}</p>
+                )}
                 <Button
                   variant="gradient"
                   size="lg"
