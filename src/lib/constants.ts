@@ -61,36 +61,6 @@ export const services = [
   },
 ] as const;
 
-export const projects = [
-  {
-    title: "FinTech Core",
-    description:
-      "A real-time asset tracking platform that boosted user engagement by 40%.",
-    tech: "Next.js / Tailwind",
-    image: "/images/projects/project-1.svg",
-    accent: "primary" as const,
-    href: "#",
-  },
-  {
-    title: "Vogue Mobile",
-    description:
-      "A high-conversion e-commerce engine with integrated AR try-on features.",
-    tech: "Flutter / Firebase",
-    image: "/images/projects/project-2.svg",
-    accent: "secondary" as const,
-    href: "#",
-  },
-  {
-    title: "Nexus Cloud",
-    description:
-      "Infrastructure monitoring tool for enterprise-level cloud deployments.",
-    tech: "React / Node.js",
-    image: "/images/projects/project-3.svg",
-    accent: "primary" as const,
-    href: "#",
-  },
-] as const;
-
 export const terminalLines = [
   "> adnan init --project new-client",
   "> Scaffolding architecture...",

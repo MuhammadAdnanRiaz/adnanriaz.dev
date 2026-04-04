@@ -1,14 +1,15 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { projects } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import type { Project } from "@/lib/projects";
 
-export function CaseStudies() {
+export function CaseStudies({ projects }: { projects: Project[] }) {
   const scrollTo = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -38,7 +39,7 @@ export function CaseStudies() {
 
           return (
             <motion.article
-              key={project.title}
+              key={project.slug}
               variants={fadeInUp}
               whileHover={{ y: -6 }}
               className={`group relative aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-high ${index === 2 ? "md:col-span-2 lg:col-span-1" : ""}`}
@@ -52,22 +53,20 @@ export function CaseStudies() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent opacity-90" />
               <div className="absolute bottom-0 p-8 w-full">
-                <Badge className={accentColor}>
-                  {project.tech}
-                </Badge>
+                <Badge className={accentColor}>{project.tech}</Badge>
                 <h3 className="text-2xl font-display font-bold mt-2 mb-2">
                   {project.title}
                 </h3>
                 <p className="text-sm text-on-surface-variant mb-6">
                   {project.description}
                 </p>
-                <a
-                  href={project.href}
+                <Link
+                  href={`/projects/${project.slug}`}
                   className={`${accentColor} text-sm font-bold flex items-center gap-1 group/btn`}
                 >
                   View Study{" "}
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </div>
             </motion.article>
           );

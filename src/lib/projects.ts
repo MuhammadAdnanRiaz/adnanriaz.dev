@@ -1,0 +1,70 @@
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypePrettyCode from "rehype-pretty-code";
+
+const PROJECTS_DIR = path.join(process.cwd(), "content/projects");
+
+export type ProjectFrontmatter = {
+  title: string;
+  description: string;
+  tech: string;
+  image: string;
+  accent: "primary" | "secondary";
+  date: string;
+  role: string;
+  duration: string;
+  team: string;
+  stack: string[];
+};
+
+export type Project = ProjectFrontmatter & {
+  slug: string;
+};
+
+export type ProjectWithContent = Project & {
+  contentHtml: string;
+};
+
+export function getAllProjects(): Project[] {
+  const files = fs.readdirSync(PROJECTS_DIR).filter((f) => f.endsWith(".md"));
+
+  const projects = files.map((filename) => {
+    const slug = filename.replace(/\.md$/, "");
+    const raw = fs.readFileSync(path.join(PROJECTS_DIR, filename), "utf-8");
+    const { data } = matter(raw);
+
+    return {
+      slug,
+      ...(data as ProjectFrontmatter),
+    };
+  });
+
+  return projects.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+}
+
+export async function getProjectBySlug(
+  slug: string
+): Promise<ProjectWithContent> {
+  const raw = fs.readFileSync(path.join(PROJECTS_DIR, `${slug}.md`), "utf-8");
+  const { data, content } = matter(raw);
+
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypePrettyCode, { theme: "github-dark-default" })
+    .use(rehypeStringify)
+    .process(content);
+
+  return {
+    slug,
+    ...(data as ProjectFrontmatter),
+    contentHtml: result.toString(),
+  };
+}
