@@ -4,8 +4,8 @@ export const siteConfig = {
   title: "Adnan | Full-Stack Web & Mobile Developer",
   description:
     "Hi, I'm Adnan — I build high-performance web and mobile applications that drive growth. Specializing in React, Next.js, Flutter, and Node.js.",
-  url: "https://adnan.dev",
-  email: "hello@adnan.dev",
+  url: "https://adnanriaz.dev",
+  email: "hello@adnanriaz.dev",
   location: "Global / Remote",
 };
 
@@ -17,10 +17,9 @@ export const navLinks = [
 ] as const;
 
 export const socialLinks = [
-  { label: "Upwork", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Github", href: "#" },
-  { label: "Twitter", href: "#" },
+  { label: "Upwork", href: "https://www.upwork.com/freelancers/~01671c7ab4a7952104" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammadadnanriaz/" },
+  { label: "Github", href: "https://github.com/MuhammadAdnanRiaz/" },
 ] as const;
 
 export const skills = [

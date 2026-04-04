@@ -97,9 +97,9 @@ const jsonLd = {
     "PostgreSQL",
   ],
   sameAs: [
-    "https://github.com/adnan",
-    "https://linkedin.com/in/adnan",
-    "https://twitter.com/adnan",
+    "https://github.com/MuhammadAdnanRiaz/",
+    "https://www.linkedin.com/in/muhammadadnanriaz/",
+    "https://www.upwork.com/freelancers/~01671c7ab4a7952104",
   ],
 };
 
