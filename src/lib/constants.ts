@@ -91,45 +91,6 @@ export const projects = [
   },
 ] as const;
 
-export const blogPosts = [
-  {
-    category: "Architecture",
-    title: "Mastering Next.js 14 Server Actions",
-    description:
-      "Deep dive into the new paradigms of server-side data mutations in modern React apps.",
-    date: "Oct 12, 2024",
-    readTime: "5 min read",
-    accent: "primary" as const,
-  },
-  {
-    category: "Design Systems",
-    title: "Atomic CSS vs. Component Scoping",
-    description:
-      "A comparative study on performance and maintainability at scale.",
-    date: "Sep 28, 2024",
-    readTime: "8 min read",
-    accent: "secondary" as const,
-  },
-  {
-    category: "Mobile",
-    title: "Flutter Web Performance Tuning",
-    description:
-      "How we achieved 60fps animations in a browser-based canvas environment.",
-    date: "Sep 15, 2024",
-    readTime: "12 min read",
-    accent: "primary" as const,
-  },
-  {
-    category: "Cloud",
-    title: "Scaling PostgreSQL to Millions",
-    description:
-      "Real-world strategies for database sharding and read replicas in high-traffic SaaS.",
-    date: "Aug 30, 2024",
-    readTime: "15 min read",
-    accent: "secondary" as const,
-  },
-] as const;
-
 export const terminalLines = [
   "> adnan init --project new-client",
   "> Scaffolding architecture...",

@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
+import { getAllPosts } from "@/lib/blog";
 
 // Below-fold sections: lazy-loaded to reduce initial JS bundle
 const Services = dynamic(() =>
@@ -27,6 +28,8 @@ const Contact = dynamic(() =>
 );
 
 export default function Home() {
+  const posts = getAllPosts();
+
   return (
     <>
       <Navbar />
@@ -34,7 +37,7 @@ export default function Home() {
         <Hero />
         <Services />
         <CaseStudies />
-        <Blog />
+        <Blog posts={posts} />
         <SkillsMarquee />
         <Contact />
       </main>
