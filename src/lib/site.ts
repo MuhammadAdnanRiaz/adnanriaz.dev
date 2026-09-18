@@ -122,9 +122,9 @@ export const career = [
   },
   {
     period: "2022 — 2023",
-    org: "ConnectIn and Aagekya (contract)",
+    org: "LetsConnectIn and Aagekya (contract)",
     role: "Primary engineer",
-    body: "Next.js platform with scheduled matching, calendar invites and email, for a digital-therapy ecosystem and its networking spin-off. Both live.",
+    body: "Next.js mentorship and networking platform: goal-based matching, roulette and water-cooler scheduling, calendar invites and email nudges. Live at letsconnectin.com.",
   },
   {
     period: "Earlier",
