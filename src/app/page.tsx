@@ -1,46 +1,26 @@
-import dynamic from "next/dynamic";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
-import { Hero } from "@/components/sections/hero";
-import { getAllPosts } from "@/lib/blog";
+import { Nav } from "@/components/nav";
+import { Hero } from "@/components/hero";
+import { Work } from "@/components/work";
+import { Services } from "@/components/services";
+import { Process } from "@/components/process";
+import { About } from "@/components/about";
+import { Faq } from "@/components/faq";
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 import { getAllProjects } from "@/lib/projects";
 
-// Below-fold sections: lazy-loaded to reduce initial JS bundle
-const Services = dynamic(() =>
-  import("@/components/sections/services").then((m) => ({ default: m.Services }))
-);
-const CaseStudies = dynamic(() =>
-  import("@/components/sections/case-studies").then((m) => ({
-    default: m.CaseStudies,
-  }))
-);
-const Blog = dynamic(() =>
-  import("@/components/sections/blog").then((m) => ({ default: m.Blog }))
-);
-const SkillsMarquee = dynamic(() =>
-  import("@/components/sections/skills-marquee").then((m) => ({
-    default: m.SkillsMarquee,
-  }))
-);
-const Contact = dynamic(() =>
-  import("@/components/sections/contact").then((m) => ({
-    default: m.Contact,
-  }))
-);
-
 export default function Home() {
-  const posts = getAllPosts();
   const projects = getAllProjects();
-
   return (
     <>
-      <Navbar />
-      <main>
+      <Nav />
+      <main id="main">
         <Hero />
+        <Work projects={projects} />
         <Services />
-        <CaseStudies projects={projects} />
-        <Blog posts={posts} />
-        <SkillsMarquee />
+        <Process />
+        <About />
+        <Faq />
         <Contact />
       </main>
       <Footer />

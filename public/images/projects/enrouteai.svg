@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Dashboard with route map, pricing chart and KPI tiles">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141416"/><stop offset="1" stop-color="#0a0a0b"/></linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.1" r="0.7"><stop offset="0" stop-color="#f2c14e" stop-opacity="0.22"/><stop offset="1" stop-color="#f2c14e" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2c14e" stop-opacity="0.35"/><stop offset="1" stop-color="#f2c14e" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/><rect width="1600" height="1000" fill="url(#glow)"/>
+  <!-- app chrome -->
+  <rect x="80" y="70" width="1440" height="860" rx="20" fill="#0f0f11" stroke="#26262b"/>
+  <rect x="80" y="70" width="1440" height="56" rx="20" fill="#131316"/><rect x="80" y="106" width="1440" height="20" fill="#131316"/>
+  <circle cx="116" cy="98" r="6" fill="#3a3a40"/><circle cx="138" cy="98" r="6" fill="#3a3a40"/><circle cx="160" cy="98" r="6" fill="#3a3a40"/>
+  <text x="200" y="104" font-family="Menlo, monospace" font-size="16" fill="#8a877f">ops / lanes / live</text>
+  <!-- sidebar -->
+  <rect x="80" y="126" width="220" height="804" fill="#111113"/>
+  <g fill="#2a2a30"><rect x="108" y="170" width="140" height="12" rx="6"/><rect x="108" y="206" width="110" height="12" rx="6"/><rect x="108" y="242" width="150" height="12" rx="6"/><rect x="108" y="278" width="90" height="12" rx="6"/></g>
+  <rect x="100" y="160" width="184" height="32" rx="8" fill="#f2c14e" fill-opacity="0.12"/><rect x="108" y="170" width="140" height="12" rx="6" fill="#f2c14e" fill-opacity="0.8"/>
+  <!-- map panel -->
+  <rect x="330" y="156" width="760" height="470" rx="14" fill="#0c0c0e" stroke="#222226"/>
+  <rect x="330" y="156" width="760" height="470" rx="14" fill="url(#grid)"/>
+  <!-- faux coastline / regions -->
+  <path d="M370 520 C 450 470, 520 500, 590 440 S 720 380, 800 400 S 960 330, 1060 360" fill="none" stroke="#2c2c33" stroke-width="2"/>
+  <path d="M360 300 C 470 250, 560 320, 650 260 S 820 200, 900 240 S 1000 190, 1070 210" fill="none" stroke="#2c2c33" stroke-width="2"/>
+  <!-- routes -->
+  <path d="M400 480 L 520 360 L 660 400 L 780 300 L 900 330 L 1020 250" fill="none" stroke="#f2c14e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M420 250 L 540 290 L 700 230 L 860 470 L 980 420" fill="none" stroke="#7fd8a4" stroke-width="2.5" stroke-opacity="0.8" stroke-linejoin="round" stroke-dasharray="8 8"/>
+  <g fill="#0a0a0b" stroke="#f2c14e" stroke-width="3"><circle cx="400" cy="480" r="8"/><circle cx="520" cy="360" r="8"/><circle cx="660" cy="400" r="8"/><circle cx="780" cy="300" r="8"/><circle cx="900" cy="330" r="8"/><circle cx="1020" cy="250" r="8"/></g>
+  <g fill="#0a0a0b" stroke="#7fd8a4" stroke-width="2.5"><circle cx="420" cy="250" r="6"/><circle cx="700" cy="230" r="6"/><circle cx="860" cy="470" r="6"/><circle cx="980" cy="420" r="6"/></g>
+  <rect x="800" y="180" width="270" height="72" rx="10" fill="#141416" stroke="#2a2a30"/>
+  <text x="818" y="208" font-family="Menlo, monospace" font-size="14" fill="#8a877f">LANE  CHI → ATL</text>
+  <text x="818" y="236" font-family="Helvetica, Arial, sans-serif" font-size="20" fill="#f3f1ec" font-weight="700">$2.41 / mi   <tspan fill="#7fd8a4" font-size="14">▲ 3.2%</tspan></text>
+  <!-- KPI tiles -->
+  <g>
+    <rect x="1120" y="156" width="370" height="140" rx="14" fill="#131316" stroke="#222226"/>
+    <text x="1144" y="190" font-family="Menlo, monospace" font-size="13" fill="#8a877f">LANES PRICED · TODAY</text>
+    <text x="1144" y="250" font-family="Helvetica, Arial, sans-serif" font-size="52" fill="#f3f1ec" font-weight="700">1,284</text>
+    <text x="1310" y="250" font-family="Menlo, monospace" font-size="16" fill="#7fd8a4">live</text>
+    <rect x="1120" y="320" width="370" height="140" rx="14" fill="#131316" stroke="#222226"/>
+    <text x="1144" y="354" font-family="Menlo, monospace" font-size="13" fill="#8a877f">MODEL vs. HISTORY</text>
+    <rect x="1144" y="386" width="322" height="10" rx="5" fill="#26262b"/><rect x="1144" y="386" width="228" height="10" rx="5" fill="#f2c14e"/>
+    <text x="1144" y="432" font-family="Menlo, monospace" font-size="14" fill="#a7a39b">71% within tolerance</text>
+    <rect x="1120" y="486" width="370" height="140" rx="14" fill="#131316" stroke="#222226"/>
+    <text x="1144" y="520" font-family="Menlo, monospace" font-size="13" fill="#8a877f">OPEN BIDS</text>
+    <text x="1144" y="580" font-family="Helvetica, Arial, sans-serif" font-size="52" fill="#f3f1ec" font-weight="700">37</text>
+    <text x="1240" y="580" font-family="Menlo, monospace" font-size="16" fill="#a7a39b">· 4 due today</text>
+  </g>
+  <!-- chart panel -->
+  <rect x="330" y="656" width="1160" height="240" rx="14" fill="#131316" stroke="#222226"/>
+  <text x="354" y="690" font-family="Menlo, monospace" font-size="13" fill="#8a877f">RATE PER MILE · 90 DAYS</text>
+  <g stroke="#222226"><line x1="354" y1="740" x2="1466" y2="740"/><line x1="354" y1="790" x2="1466" y2="790"/><line x1="354" y1="840" x2="1466" y2="840"/></g>
+  <path d="M354 830 L 440 820 L 520 800 L 600 812 L 680 780 L 760 790 L 840 760 L 920 770 L 1000 740 L 1080 750 L 1160 720 L 1240 730 L 1320 705 L 1400 712 L 1466 700 L 1466 870 L 354 870 Z" fill="url(#area)"/>
+  <path d="M354 830 L 440 820 L 520 800 L 600 812 L 680 780 L 760 790 L 840 760 L 920 770 L 1000 740 L 1080 750 L 1160 720 L 1240 730 L 1320 705 L 1400 712 L 1466 700" fill="none" stroke="#f2c14e" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="1466" cy="700" r="6" fill="#f2c14e"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Phone screens showing restaurant list, cart and payment confirmation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141416"/><stop offset="1" stop-color="#0a0a0b"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.95" r="0.8"><stop offset="0" stop-color="#f2c14e" stop-opacity="0.2"/><stop offset="1" stop-color="#f2c14e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/><rect width="1600" height="1000" fill="url(#glow)"/>
+  <!-- phone 1: list -->
+  <g transform="translate(300 110) rotate(-4)">
+    <rect x="0" y="0" width="360" height="760" rx="44" fill="#0c0c0e" stroke="#2a2a30" stroke-width="3"/>
+    <rect x="120" y="18" width="120" height="26" rx="13" fill="#1a1a1e"/>
+    <text x="28" y="96" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#f3f1ec" font-weight="700">Good evening, Ines</text>
+    <rect x="28" y="116" width="304" height="44" rx="22" fill="#18181b"/><text x="52" y="144" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#6e6b65">Search sushi, ramen, bowls…</text>
+    <g>
+      <rect x="28" y="184" width="304" height="150" rx="18" fill="#18181b"/><rect x="28" y="184" width="304" height="96" rx="18" fill="#26262b"/><rect x="28" y="262" width="304" height="18" fill="#26262b"/>
+      <text x="44" y="310" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#f3f1ec" font-weight="700">Sushi Daily · Antwerpen</text><text x="44" y="330" font-family="Menlo, monospace" font-size="12" fill="#a7a39b">25–35 min · €2.50 delivery</text>
+      <rect x="28" y="352" width="304" height="150" rx="18" fill="#18181b"/><rect x="28" y="352" width="304" height="96" rx="18" fill="#26262b"/><rect x="28" y="430" width="304" height="18" fill="#26262b"/>
+      <text x="44" y="478" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#f3f1ec" font-weight="700">Maki House · Gent</text><text x="44" y="498" font-family="Menlo, monospace" font-size="12" fill="#a7a39b">30–40 min · €1.90 delivery</text>
+      <rect x="28" y="520" width="304" height="150" rx="18" fill="#18181b"/><rect x="28" y="520" width="304" height="96" rx="18" fill="#26262b"/>
+    </g>
+    <rect x="0" y="690" width="360" height="70" rx="0" fill="#0f0f11"/><rect x="0" y="716" width="360" height="44" rx="44" fill="#0f0f11"/>
+    <g fill="#3a3a40"><circle cx="70" cy="726" r="8"/><circle cx="150" cy="726" r="8"/><circle cx="230" cy="726" r="8"/><circle cx="310" cy="726" r="8"/></g><circle cx="70" cy="726" r="8" fill="#f2c14e"/>
+  </g>
+  <!-- phone 2: cart / checkout -->
+  <g transform="translate(640 60)">
+    <rect x="0" y="0" width="380" height="800" rx="46" fill="#0c0c0e" stroke="#f2c14e" stroke-opacity="0.6" stroke-width="3"/>
+    <rect x="130" y="18" width="120" height="26" rx="13" fill="#1a1a1e"/>
+    <text x="30" y="100" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#f3f1ec" font-weight="700">Checkout</text>
+    <g font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#f3f1ec">
+      <text x="30" y="160">2 × Salmon Nigiri</text><text x="350" y="160" text-anchor="end">€ 9,80</text>
+      <text x="30" y="196">1 × Dragon Roll</text><text x="350" y="196" text-anchor="end">€ 12,50</text>
+      <text x="30" y="232">1 × Miso Soup</text><text x="350" y="232" text-anchor="end">€ 3,90</text>
+    </g>
+    <line x1="30" y1="256" x2="350" y2="256" stroke="#26262b"/>
+    <text x="30" y="292" font-family="Menlo, monospace" font-size="12" fill="#8a877f">DELIVER TO</text>
+    <rect x="30" y="304" width="320" height="64" rx="14" fill="#18181b"/><text x="46" y="330" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#f3f1ec">Lange Leemstraat 12, 2018 Antwerpen</text><text x="46" y="354" font-family="Menlo, monospace" font-size="12" fill="#a7a39b">+32 4xx xx xx xx · Belgium</text>
+    <text x="30" y="404" font-family="Menlo, monospace" font-size="12" fill="#8a877f">PAYMENT</text>
+    <rect x="30" y="416" width="320" height="56" rx="14" fill="#18181b" stroke="#f2c14e" stroke-opacity="0.5"/><text x="46" y="450" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#f3f1ec">Bancontact · •••• 4471</text>
+    <rect x="30" y="500" width="320" height="1" fill="#26262b"/>
+    <text x="30" y="540" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#a7a39b">Delivery</text><text x="350" y="540" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#a7a39b" text-anchor="end">€ 2,50</text>
+    <text x="30" y="580" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#f3f1ec" font-weight="700">Total</text><text x="350" y="580" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#f3f1ec" font-weight="700" text-anchor="end">€ 28,70</text>
+    <rect x="30" y="700" width="320" height="58" rx="29" fill="#f2c14e"/><text x="190" y="737" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#1c1400" font-weight="700" text-anchor="middle">Pay € 28,70</text>
+  </g>
+  <!-- phone 3: confirmed -->
+  <g transform="translate(1000 130) rotate(4)">
+    <rect x="0" y="0" width="360" height="760" rx="44" fill="#0c0c0e" stroke="#2a2a30" stroke-width="3"/>
+    <rect x="120" y="18" width="120" height="26" rx="13" fill="#1a1a1e"/>
+    <circle cx="180" cy="230" r="58" fill="#7fd8a4" fill-opacity="0.15" stroke="#7fd8a4" stroke-width="3"/>
+    <path d="M150 232 L 172 254 L 212 208" fill="none" stroke="#7fd8a4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="330" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#f3f1ec" font-weight="700" text-anchor="middle">Payment confirmed</text>
+    <text x="180" y="360" font-family="Menlo, monospace" font-size="13" fill="#a7a39b" text-anchor="middle">order #4128 · status PAID</text>
+    <rect x="28" y="410" width="304" height="180" rx="18" fill="#18181b"/>
+    <g font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#a7a39b">
+      <circle cx="52" cy="446" r="6" fill="#7fd8a4"/><text x="70" y="451" fill="#f3f1ec">Received</text>
+      <circle cx="52" cy="486" r="6" fill="#7fd8a4"/><text x="70" y="491" fill="#f3f1ec">Preparing</text>
+      <circle cx="52" cy="526" r="6" fill="#3a3a40"/><text x="70" y="531">On the way</text>
+      <circle cx="52" cy="566" r="6" fill="#3a3a40"/><text x="70" y="571">Delivered</text>
+    </g>
+    <rect x="28" y="620" width="304" height="52" rx="26" fill="#18181b" stroke="#2a2a30"/><text x="180" y="653" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#f3f1ec" text-anchor="middle">Back to Home</text>
+  </g>
+</svg>
