@@ -7,7 +7,7 @@ export const site = {
   title: "Muhammad Adnan Riaz — Senior React & Next.js Developer",
   description:
     "Senior full-stack engineer with 7+ years in production. React, Next.js, TypeScript, Node.js, PostgreSQL and React Native. Remote with US startups since 2022, based in Islamabad, available 30+ hrs/week.",
-  url: "https://adnanriaz.dev",
+  url: "https://www.adnanriaz.dev",
   location: "Islamabad, Pakistan",
   timezone: "UTC+5",
   availability: "Available · 30+ hrs/week",
